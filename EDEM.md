@@ -132,5 +132,10 @@ EDEM을 FEA 및 MBD 도구와 결합하여 구조 및 시스템 역학 해석에
 1. Co-simulation (동시 시뮬레이션):
 시간 동기화를 통해 두 시뮬레이션 도구가 동시에 데이터를 주고받음.
 예: EDEM + ANSYS Mechanical 동시 연산.
+2.	Data exchange (데이터 내보내기/가져오기):
+EDEM에서 하중, 입자 위치, 속도 등의 데이터를 추출해 다른 CAE 툴에 적용.
+반대로 다른 CAE 툴에서 계산된 변형이나 힘을 EDEM에 적용할 수도 있음.
+3.	API / Coupling Interface 활용:
+EDEM은 C++/Python 기반 API를 통해 사용자 정의 통합을 지원.
 
 
