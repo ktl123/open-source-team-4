@@ -262,4 +262,14 @@ EDEM에서 하중, 입자 위치, 속도 등의 데이터를 추출해 다른 CA
 3. API / Coupling Interface 활용:
 EDEM은 C++/Python 기반 API를 통해 사용자 정의 통합을 지원.
 
+CAE 통합을 해야하는 이유:  
+실제로 입자와 기계/구조물이 서로 영향을 주는 문제는 DEM만으로 부족하다. < 입자 하중 → 구조물 변형 → 구조물 움직임 → 입자 흐름 변화 > 의 상호작용을 제대로 파악하려면 CAE 통합이 필수이다.
+
+-EDEM과 CAE 소프트웨어의 심화 통합 사례-  
+(1) EDEM + ANSYS Mechanical  
+커플링 방식: One-way or Two-way FEA coupling
+One-way: EDEM의 입자 하중 데이터를 ANSYS에 전달하여, 구조 해석(변형, 응력)에 반영  
+Two-way: ANSYS의 변형된 구조 데이터를 다시 EDEM으로 피드백하여, 입자의 거동에 반영  
+응용 예시: 트럭 적재함, 스크린 판, 드럼 믹서의 응력-입자 간 영향 분석
+
 
