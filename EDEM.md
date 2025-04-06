@@ -278,15 +278,28 @@ EDEM 첨단 분석 기능의 장점은 강체 및 유연체와 고체 입자의 
 Altair EDEM 소프트웨어의 맞춤화 기능은 사용자가 고유한 시뮬레이션 요구 사항에 부합하도록 소프트웨어를 조정하고 확장할 수 있게 한다. 특히, EDEM의 응용 프로그래밍 인터페이스(API)를 활용하여 복잡한 시뮬레이션과 고급 재료 거동을 모델링할 수 있다.
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/41f32c5f-8e05-42c2-9224-2176281f5804" width="400">
+  <img src="https://raw.githubusercontent.com/ktl123/open-source-team-4/refs/heads/main/API.webp" width="500">
 </p>
 
 
-**<EDEM API를 통한 맞춤형 물리 모델 개발>**  
-EDEM은 기본적으로 다양한 물리 모델을 제공하지만, 특정 시뮬레이션 요구 사항을 충족하기 위해 사용자는 EDEM API를 활용하여 맞춤형 물리 모델을 개발할 수 있다. 예를 들어, 습식 코팅, 응집, 파손, 자성 입자 등의 고급 재료 거동을 시뮬레이션하기 위해 사용자 정의 모델을 구현할 수 있다. API를 활용하여 고유한 재료 거동을 모델링함으로써 시뮬레이션의 정확성과 현실성을 향상시킬 수 있다.
+**<EDEM API를 통한 사용자 정의 물리 모델 개발(User Defined Physics)>**  
+EDEM은 기본적으로 다양한 물리 모델을 제공하지만, 특정 시뮬레이션 요구 사항을 충족하기 위해 사용자는 EDEM API를 활용하여 맞춤형 물리 모델을 개발할 수 있다.  
+예를 들어, 습식 코팅, 응집, 파손, 자성 입자 등의 고급 재료 거동을 시뮬레이션하기 위해 사용자 정의 모델을 구현할 수 있다. API를 활용하여 고유한 재료 거동을 모델링함으로써 시뮬레이션의 정확성과 현실성을 향상시킬 수 있다.
+<p align="left">
+  <img src="https://github.com/ktl123/open-source-team-4/blob/main/edem-and-physics-models-jpg.jpg?raw=true" width="500">
+</p>
+
+
+* 기본 접촉 모델 외 사용자 정의 힘 적용  
+예를 들어, 일반적인 Hertz-Mindlin 모델 외에도 사용자만의 점착성, 유동성, 파괴/파손 조건 등을 수식화하여 구현 가능함
+* 실제 실험 데이터를 기반으로 보정된 맞춤형 마찰계수, 응집력 모델링 가능
+
+* 예시:
+  제약 산업에서 정제가 코팅 기계 내에서 서로 달라붙는 현상(응집)을 정량화하기 위해, 점성력 기반 맞춤 모델이 추가될 수 있음
 
 <br>
 
+## **<대표 API>** 
 **1. Material Model API (재료 물성 API)**  
   해당 API의 경우 새로운 입자 물리 모델을 직접 구현이 가능하다.
  * 습식 코팅 (Wet Coating): 입자가 액체에 의해 표면이 변형되는 경우
@@ -308,6 +321,10 @@ EDEM은 기본적으로 다양한 물리 모델을 제공하지만, 특정 시�
 * 특정 구간에서만 입자 생성
 * 시간 지연 또는 주기적으로 입자 분사
 * 입자 혼합(다양한 형상/재질 혼합)
+<p align="left">
+  <img src="https://github.com/ktl123/open-source-team-4/blob/main/Edem_pressure-Forces.png?raw=true" width="500">
+</p>
+
 
 <br>
 
